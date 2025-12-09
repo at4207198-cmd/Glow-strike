@@ -1,0 +1,96 @@
+https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+    margin: 0;
+    background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+    color: #0ff;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    animation: bgPulse 15s infinite alternate;
+}
+
+@keyframes bgPulse {
+    0% { background-position:0% 50%; }
+    100% { background-position:100% 50%; }
+}
+
+#menu {
+    margin-top: 80px;
+}
+
+.menu-btn {
+    padding: 15px 35px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    background: #0ff;
+    color: #000;
+    box-shadow: 0 0 20px #0ff;
+    transition: 0.2s;
+}
+.menu-btn:hover { transform: scale(1.1); box-shadow: 0 0 35px #0ff; }
+
+.hidden { display: none; }
+
+#top-bar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    background: #ff005e;
+    box-shadow: 0 0 25px #ff005e, 0 0 50px #ff005e;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s, box-shadow 0.2s;
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: explode 0.5s linear forwards;
+}
+@keyframes explode { from {opacity:1; transform:scale(1);} to {opacity:0; transform:scale(3);} }
+
+.trail {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0,255,255,0.4);
+    box-shadow: 0 0 20px #0ff;
+    pointer-events: none;
+    animation: fade 0.4s linear forwards;
+}
+@keyframes fade { to {opacity:0; transform:scale(1.5);} }
+
+#gameover { margin-top: 50px; }
+
+#restart {
+    font-size: 22px;
+    background: #0ff;
+    border: none;
+    padding: 15px 30px;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #0ff;
+}
+#restart:hover { transform: scale(1.1); }
+
+#leaderboard { margin-top:20px; font-size:20px; }
